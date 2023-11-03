@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-from brain_games.games import even
+from brain_games.games import prime
 
 
 def main():
-    even.ask_question_even()
+    prime.ask_question_prime()
 
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import random
 
-from brain_games.scripts import process_game_flow
+from brain_games.cli import process_game_flow
 
 
 def check_even(number: int):
@@ -19,5 +19,6 @@ def ask_question_even(n: int = 3):
     process_game_flow(
         questions=numbers,
         correct_answers=results,
-        start_phrase='Answer "yes" if the number is even, otherwise answer "no".'
+        start_phrase='Answer "yes" if the number is even'
+                     ', otherwise answer "no".'
     )

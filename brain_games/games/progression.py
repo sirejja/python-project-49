@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import random
 
-from brain_games.scripts import process_game_flow
+from brain_games.cli import process_game_flow
 
 
 def find_gcd(a: int, b: int):
@@ -38,4 +38,3 @@ def ask_question_progression(n: int = 3):
         correct_answers=results,
         start_phrase='What number is missing in the progression?'
     )
-

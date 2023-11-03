@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 import random
 
-from brain_games.scripts import process_game_flow
+from brain_games.cli import process_game_flow
 
 
 def ask_question_to_calc(n: int = 3):
     signs = ('-', '+', '*')
     questions = [
-        f'{random.randint(1, 1000)} {random.choice(signs)} {random.randint(1, 1000)}'
+        f'{random.randint(1, 1000)} '
+        f'{random.choice(signs)} '
+        f'{random.randint(1, 1000)}'
         for _ in range(n)
     ]
     correct_answers = [str(eval(question)) for question in questions]
