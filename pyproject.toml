@@ -1,9 +1,13 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Student project with Hexlet."
 authors = ["Sergei Pishchulenok"]
 readme = "README.md"
+repository = "https://github.com/sirejja/python-project-49"
+classifiers = [
+   "Topic :: Games/Entertainment"
+]
 packages = [
   { include = "brain_games" },
 ]

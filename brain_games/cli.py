@@ -1,12 +1,10 @@
-import time
-
 import prompt
 
 
 def welcome_user() -> str:
-    print('Welcome to the Brain Games!')
+    print('\nWelcome to the Brain Games!')
     # hack for early prompt
-    time.sleep(0.5)
+    # time.sleep(0.5)
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     return name
@@ -28,7 +26,7 @@ def process_game_flow(
         print(f'Question: {question}')
 
         # hack for early prompt
-        time.sleep(0.5)
+        # time.sleep(0.5)
 
         guess_input = prompt.string('Your answer: ')
 
