@@ -19,7 +19,7 @@ def ask_question_progression(n: int = 3):
     for _ in range(n):
         progression_numbers = []
 
-        step = random.randint(1, 1000)
+        step = random.randint(1, 100)
         number = random.randint(1, 1000)
         progression_numbers.append(str(number))
 

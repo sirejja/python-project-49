@@ -17,7 +17,7 @@ def ask_question_gcd(n: int = 3):
     questions = []
     results = []
     for _ in range(n):
-        a, b = random.randint(1, 100), random.randint(1, 100)
+        a, b = random.randint(1, 10), random.randint(1, 40)
         results.append(str(find_gcd(a, b)))
         questions.append(f'{a} {b}')
 
