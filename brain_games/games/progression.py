@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import random
 
 from brain_games.cli import process_game_flow
@@ -13,10 +12,10 @@ def find_gcd(a: int, b: int):
     return a + b
 
 
-def ask_question_progression(n: int = 3):
+def ask_question_progression(attempts: int) -> None:
     questions = []
-    results = []
-    for _ in range(n):
+    correct_answers = []
+    for _ in range(attempts):
         progression_numbers = []
 
         step = random.randint(1, 100)
@@ -28,13 +27,12 @@ def ask_question_progression(n: int = 3):
             progression_numbers.append(str(number))
 
         hidden_number_idx = random.randint(0, len(progression_numbers) - 1)
-        results.append(str(progression_numbers[hidden_number_idx]))
+        correct_answers.append(str(progression_numbers[hidden_number_idx]))
         progression_numbers[hidden_number_idx] = '..'
 
         questions.append(' '.join(progression_numbers))
 
     process_game_flow(
-        questions=questions,
-        correct_answers=results,
+        questions_answers=zip(questions, correct_answers),
         start_phrase='What number is missing in the progression?'
     )

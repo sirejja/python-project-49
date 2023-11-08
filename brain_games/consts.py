@@ -1,0 +1,3 @@
+YES_ANSWER = 'yes'
+NO_ANSWER = 'no'
+ATTEMPTS_CNT = 3

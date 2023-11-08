@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import random
 
 from brain_games.cli import process_game_flow
@@ -13,16 +12,15 @@ def find_gcd(a: int, b: int):
     return a + b
 
 
-def ask_question_gcd(n: int = 3):
+def ask_question_gcd(attempts: int) -> None:
     questions = []
-    results = []
-    for _ in range(n):
+    correct_answers = []
+    for _ in range(attempts):
         a, b = random.randint(1, 10), random.randint(1, 40)
-        results.append(str(find_gcd(a, b)))
+        correct_answers.append(str(find_gcd(a, b)))
         questions.append(f'{a} {b}')
 
     process_game_flow(
-        questions=questions,
-        correct_answers=results,
+        questions_answers=zip(questions, correct_answers),
         start_phrase='Find the greatest common divisor of given numbers.'
     )

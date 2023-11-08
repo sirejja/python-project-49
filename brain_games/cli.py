@@ -1,32 +1,25 @@
+import typing
+
 import prompt
 
 
 def welcome_user() -> str:
     print('\nWelcome to the Brain Games!')
-    # hack for early prompt
-    # time.sleep(0.5)
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     return name
 
 
 def process_game_flow(
-        start_phrase: str | None = None,
-        questions: list[str | int] | None = None,
-        correct_answers: list[str] | None = None,
+        start_phrase: str,
+        questions_answers: typing.Iterable[tuple[str, str]],
 ):
     name = welcome_user()
-    if not any((start_phrase, questions, correct_answers)):
-        return
-
     print(start_phrase)
 
-    for question, correct_answer in zip(questions, correct_answers):
+    for question, correct_answer in questions_answers:
 
         print(f'Question: {question}')
-
-        # hack for early prompt
-        # time.sleep(0.5)
 
         guess_input = prompt.string('Your answer: ')
 
